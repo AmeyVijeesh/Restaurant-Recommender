@@ -1,0 +1,49 @@
+body {
+  background-color: #a9ba9d;
+}
+
+.landingDiv {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.bodyDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.bodyH1 {
+  color: #fff;
+  font-size: 4.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bodyText {
+  color: #333333;
+  font-size: 1.25rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  line-height: 2rem;
+}
+
+.imgDiv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foodImg {
+  height: 75vh;
+  width: auto;
+}
+
+/*
+Background: Soft Olive Green (#A9BA9D) or Light Sage (#E6E8D8)
+Primary Elements: Deep Forest Green (#2E5339) or Rich Brown (#5D4037)
+Text: Charcoal (#333333) or Dark Brown (#4A4A4A)
+Accent Color: Copper (#B87333) or Warm Beige (#D2B48C)
+
+*/
