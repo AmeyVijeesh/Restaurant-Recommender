@@ -2,6 +2,7 @@ import React from 'react';
 import './landing.css';
 import img from './bgimg.jpg';
 import img2 from './bgimg2.png';
+import { NavLink } from 'react-router-dom';
 
 const Landing = () => {
   return (
@@ -19,7 +20,11 @@ const Landing = () => {
             preferences. Go ahead, try it out, it's free.
           </p>
           <div className="buttonDiv">
-            <button className="bodyBtn">Get Started</button>
+            <button className="bodyBtn">
+              <NavLink to="/results" style={{ color: '#fff' }}>
+                Get Started
+              </NavLink>
+            </button>
             <button className="bodyBtn">Learn More</button>
           </div>
         </div>

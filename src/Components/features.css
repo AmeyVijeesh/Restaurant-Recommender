@@ -1,0 +1,37 @@
+.featCont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featH1 {
+  color: #164214;
+  font-size: 3.25rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.featDivs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featDiv {
+  width: 50vh;
+  margin: 5%;
+  border: 1px solid #333333;
+  padding: 2%;
+  border-radius: 7px;
+}
+
+.featTitle {
+  color: #ffffff;
+  text-align: center;
+  margin: 5%;
+}
+
+.featP {
+  text-align: justify;
+}
