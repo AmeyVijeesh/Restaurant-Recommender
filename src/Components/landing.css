@@ -40,10 +40,60 @@ body {
   width: auto;
 }
 
-/*
-Background: Soft Olive Green (#A9BA9D) or Light Sage (#E6E8D8)
-Primary Elements: Deep Forest Green (#2E5339) or Rich Brown (#5D4037)
-Text: Charcoal (#333333) or Dark Brown (#4A4A4A)
-Accent Color: Copper (#B87333) or Warm Beige (#D2B48C)
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
 
-*/
+.bodyBtn {
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #543030;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  margin: 2%;
+  width: 15%;
+  transition: box-shadow 0.3s ease;
+}
+
+.bodyBtn:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .landingDiv {
+    flex-direction: column;
+    height: auto;
+    padding: 5%;
+  }
+
+  .bodyH1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2%;
+  }
+
+  .bodyText {
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+
+  .foodImg {
+    height: 50vh;
+  }
+
+  .imgDiv {
+    height: auto;
+  }
+
+  .bodyBtn {
+    width: auto;
+  }
+
+  .buttonDiv {
+    justify-content: center;
+  }
+}
