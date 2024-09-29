@@ -1,5 +1,6 @@
 import React from 'react';
 import './navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -28,7 +29,9 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item active">
                 <a className="nav-link px-3" href="#!">
-                  Home
+                  <NavLink style={{ color: '#fff' }} to="/">
+                    Home
+                  </NavLink>
                 </a>
               </li>
               <li className="nav-item">
