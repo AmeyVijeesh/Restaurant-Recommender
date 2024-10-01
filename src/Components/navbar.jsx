@@ -36,40 +36,44 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link px-3" href="#!">
-                  Find Restaurants
+                  <NavLink to="/results" style={{ color: '#fff' }}>
+                    Find Restaurants
+                  </NavLink>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link px-3" href="#!">
+                <a
+                  className="nav-link px-3"
+                  href="#!"
+                  onClick={() => {
+                    window.open('https://ameyvijeesh.netlify.app');
+                  }}
+                >
                   About
                 </a>
               </li>
               <li className="nav-item active">
-                <a className="nav-link px-3" href="#!">
+                <a
+                  className="nav-link px-3"
+                  href="#!"
+                  onClick={() => {
+                    window.open('https://ameyvijeesh.netlify.app');
+                  }}
+                >
+                  {' '}
                   Contact
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link px-3" href="#!">
+                <a
+                  className="nav-link px-3"
+                  href="#!"
+                  onClick={() => {
+                    window.open('https://ameyvijeesh.netlify.app');
+                  }}
+                >
+                  {' '}
                   More Projects
-                </a>
-              </li>
-            </ul>
-
-            <ul className="navbar-nav flex-row">
-              <li className="nav-item">
-                <a className="nav-link pe-3" href="#!">
-                  <i className="fab fa-youtube"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link px-3" href="#!">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link ps-3" href="#!">
-                  <i className="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>

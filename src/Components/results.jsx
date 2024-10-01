@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import './results.css';
 import axios from 'axios';
 import { locationOptions, typeOptions } from './featureNames.js';
@@ -12,28 +13,8 @@ const Results = () => {
     rest_type: '',
     'listed_in(type)': '',
   });
-  const [page, setPage] = useState(1);
 
   const [recommendations, setRecommendations] = useState([]);
-
-  const handleLoadMore = async () => {
-    try {
-      const response = await axios.post('http://127.0.0.1:5000/recommend', {
-        ...inputData,
-        page: page + 1,
-      });
-      setRecommendations((prevRecommendations) => {
-        const newRecommendations = response.data.filter(
-          (restaurant) =>
-            !prevRecommendations.some((prev) => prev.name === restaurant.name)
-        );
-        return [...prevRecommendations, ...newRecommendations];
-      });
-      setPage(page + 1);
-    } catch (error) {
-      console.error('Error loading more recommendations:', error);
-    }
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,9 +23,9 @@ const Results = () => {
       [name]: name === 'cost' ? parseInt(value, 10) : value,
     }));
   };
+  const navigate = useNavigate();
 
   const handleRecommend = async () => {
-    // Check if any required field is empty
     if (
       !inputData.location ||
       !inputData.cost ||
@@ -52,7 +33,7 @@ const Results = () => {
       !inputData['listed_in(type)']
     ) {
       alert('Please fill out all fields before getting recommendations.');
-      return; // Stop execution if validation fails
+      return;
     }
 
     try {
@@ -65,19 +46,23 @@ const Results = () => {
         alert(response.data.message);
         setRecommendations([]);
       } else {
-        setRecommendations(response.data);
+        navigate('/recommendations', {
+          state: { recommendations: response.data, inputData },
+        });
       }
     } catch (error) {
       if (error.response) {
         if (error.response.status === 404) {
-          alert("This ain't working dude");
+          alert('Unexpected error');
         } else {
           console.error('Error fetching recommendations:', error);
-          alert('An unexpected error occurred');
+          alert(
+            'Sorry, no restaurant is available for your search criteria. Please change the inputs and try again.'
+          );
         }
       } else {
         console.error('Error fetching recommendations:', error);
-        alert('An unexpected error occurred');
+        alert('An unexpected error occurred: ', error);
       }
     }
   };
@@ -171,9 +156,6 @@ const Results = () => {
                 </ul>
               </div>
             )}
-            <button onClick={handleLoadMore} className="genBtn">
-              Generate More
-            </button>
           </div>
         </div>
         <img src={img} className="sideImg" />
