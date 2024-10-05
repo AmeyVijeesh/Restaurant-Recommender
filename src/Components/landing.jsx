@@ -1,6 +1,5 @@
 import React from 'react';
 import './landing.css';
-import img from './bgimg.jpg';
 import img2 from './bgimg2.png';
 import { NavLink } from 'react-router-dom';
 
