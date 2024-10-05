@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0 navC">
+      <nav
+        style={{ width: '100%' }}
+        className="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0 navC"
+      >
         <div className="container">
           <a className="navbar-brand d-lg-none" href="#">
             AI Restaurant Recommender

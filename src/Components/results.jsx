@@ -134,7 +134,9 @@ const Results = () => {
           <div>
             {recommendations.length > 0 && (
               <div>
-                <h2>Recommended Restaurants:</h2>
+                <h2 style={{ textAlign: 'center' }}>
+                  Recommended Restaurants:
+                </h2>
                 <ul>
                   {recommendations.map((restaurant, index) => (
                     <li key={index}>

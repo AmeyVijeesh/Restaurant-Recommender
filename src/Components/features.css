@@ -35,3 +35,13 @@
 .featP {
   text-align: justify;
 }
+
+@media (max-width: 768px) {
+  .featDivs {
+    flex-direction: column;
+  }
+
+  .featDiv {
+    width: 30vh;
+  }
+}

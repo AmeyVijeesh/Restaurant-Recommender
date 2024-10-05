@@ -68,13 +68,13 @@ body {
   .landingDiv {
     flex-direction: column;
     height: auto;
-    padding: 5%;
+    margin: 5%;
   }
 
   .bodyH1 {
     font-size: 2rem;
     text-align: center;
-    margin: 2%;
+    margin: 5%;
   }
 
   .bodyText {
@@ -83,7 +83,7 @@ body {
   }
 
   .foodImg {
-    height: 50vh;
+    height: 45vh;
   }
 
   .imgDiv {
@@ -96,5 +96,41 @@ body {
 
   .buttonDiv {
     justify-content: center;
+  }
+}
+
+/* Tablets and iPads (max-width: 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .landingDiv {
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .bodyH1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 4%;
+  }
+
+  .bodyText {
+    font-size: 1.15rem;
+    padding: 5%;
+    text-align: justify;
+  }
+
+  .foodImg {
+    height: 55vh;
+  }
+
+  .imgDiv {
+    height: auto;
+  }
+
+  .buttonDiv {
+    justify-content: center;
+  }
+
+  .bodyBtn {
+    width: auto;
   }
 }
