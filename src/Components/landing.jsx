@@ -24,7 +24,16 @@ const Landing = () => {
                 Get Started
               </NavLink>
             </button>
-            <button className="bodyBtn">Learn More</button>
+            <button
+              className="bodyBtn"
+              onClick={() => {
+                window.open(
+                  'https://github.com/AmeyVijeesh/Restaurant-Recommender/blob/master/README.md'
+                );
+              }}
+            >
+              Learn More
+            </button>
           </div>
         </div>
         <div className="imgDiv">

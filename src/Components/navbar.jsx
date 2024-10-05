@@ -57,7 +57,7 @@ const Navbar = () => {
                   className="nav-link px-3"
                   href="#!"
                   onClick={() => {
-                    window.open('https://ameyvijeesh.netlify.app');
+                    window.open('https://ameyvijeesh.netlify.app/contact');
                   }}
                 >
                   {' '}
@@ -69,7 +69,7 @@ const Navbar = () => {
                   className="nav-link px-3"
                   href="#!"
                   onClick={() => {
-                    window.open('https://ameyvijeesh.netlify.app');
+                    window.open('https://github.com/AmeyVijeesh');
                   }}
                 >
                   {' '}

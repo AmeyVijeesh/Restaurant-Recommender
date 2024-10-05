@@ -53,7 +53,9 @@ const Results = () => {
     } catch (error) {
       if (error.response) {
         if (error.response.status === 404) {
-          alert('Unexpected error');
+          alert(
+            'Sorry, no restaurant is available for your search criteria. Please change the inputs and try again.'
+          );
         } else {
           console.error('Error fetching recommendations:', error);
           alert(
@@ -62,7 +64,9 @@ const Results = () => {
         }
       } else {
         console.error('Error fetching recommendations:', error);
-        alert('An unexpected error occurred: ', error);
+        alert(
+          'Sorry, no restaurant is available for your search criteria. Please change the inputs and try again.'
+        );
       }
     }
   };
