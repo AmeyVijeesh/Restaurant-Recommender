@@ -23,7 +23,7 @@ const Features = () => {
               want to splurge a bit? Want to try something exotic? Or do you
               want to find out those hidden gems?
             </p>
-          </div>{' '}
+          </div>
           <div className="featDiv">
             <h1 className="featTitle">Find Based on Location</h1>
             <p className="featP">
@@ -32,7 +32,6 @@ const Features = () => {
             </p>
           </div>
         </div>
-        {/* Our features: */}
       </div>
     </>
   );

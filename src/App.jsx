@@ -7,6 +7,7 @@ import Results from './Components/results';
 import Home from './Components/home';
 import Navbar from './Components/navbar';
 import Recommendations from './Components/recommends';
+import PageNotFound from './Components/404';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/results" element={<Results />} />
           <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </>
